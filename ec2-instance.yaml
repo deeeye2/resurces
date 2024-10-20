@@ -10,7 +10,7 @@ resources:
       instance_type: t2.micro
       ami_id: ami-050887ebff330de9f
       key_name: jenkins_key
-      parallel: true
+     
 
     - name: parallel-instance-2
       region: us-east-1
@@ -22,5 +22,5 @@ resources:
       instance_type: t2.micro
       ami_id: ami-050887ebff330de9f
       key_name: jenkins_key
-      parallel: true
+      
 
