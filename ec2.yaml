@@ -1,6 +1,4 @@
-resources:
-
-  # EC2 instance creation
+resources: # EC2 instance creation
   ec2_instances:
     - instance_type: t2.micro
       ami_id: ami-050887ebff330de9f
