@@ -1,4 +1,6 @@
-resources: # EC2 instance creation
+resources:
+
+  # EC2 instance creation
   ec2_instances:
     - instance_type: t2.micro
       ami_id: ami-050887ebff330de9f
@@ -8,5 +10,13 @@ resources: # EC2 instance creation
       count: 1
       tags:
         - Key: Name
-          Value: remote-agent
+          Value: test
       subnet_id: subnet-01836ae2845801323
+      iam_instance_profile: devops-bot
+      block_device_mappings:
+        - DeviceName: /dev/sdh
+          Ebs:
+            VolumeSize: 10
+      monitoring: true
+      instance_initiated_shutdown_behavior: terminate
+      create_remote: true
